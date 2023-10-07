@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registrar Estudiente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ <ion-list>
+  <ion-item>
+    <ion-label floating>Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="datos.nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Correo</ion-label>
+    <ion-input type="text" [(ngModel)]="datos.correo"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Universidad</ion-label>
+    <ion-input type="text" [(ngModel)]="datos.universidad"></ion-input>
+  </ion-item>
+  <br>
+  <!-- Boton insertar -->
+ </ion-list>
+ <ion-button round (click)="save()" color="success">Guardar</ion-button>
+ <ion-button routerLink="/home" color="light">Volver</ion-button>
+</ion-content>
